@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Cal+Sans&family=Duru+Sans&display=swap");
+
 :root {
   --bg: #f8f7f3;
   --black: #0f0a09;
@@ -13,14 +15,34 @@ body {
   background-color: var(--bg);
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Cal Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
+p,
+a,
+span,
+div,
+button {
+  font-family: "Duru Sans", sans-serif;
+  font-size: small;
+  font-weight: 400;
+  font-style: normal;
+}
 
 header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 100;                                                                                                                                                                                                                                                                             
+  z-index: 100;
 }
 
 nav {
@@ -34,15 +56,18 @@ nav {
   align-items: baseline;
 }
 
-.header-menu{
-    display: flex;
-    flex-direction: row;
-    gap: 8px;
-   
+.header-menu {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
 }
 
-menu{
-    display: flex;
-    flex-direction: row;
-    gap: 8px;
+menu {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+a {
+  text-decoration: none;
 }
