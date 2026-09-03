@@ -5,6 +5,7 @@
   --sec-bg: rgb(96, 90, 90);
   --black: #0f0a09;
   --orange: #f9b049;
+  --skills-bg: #ebe8df;
   --base-size: 16px;
   --h1-size: 3.5rem;
   --h2-size: 2rem;
@@ -99,7 +100,8 @@ header {
 
 nav {
   margin: 10px 150px;
-  background-color: rgb(207, 207, 222);
+  background-color: rgba(207, 207, 222, 0.9);
+  box-shadow: 0 4px 14px rgba(15, 10, 9, 0.12);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -130,6 +132,14 @@ menu > a {
   text-decoration: none;
   font-size: 0.95rem;
   font-weight: 600;
+  color: var(--black);
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+menu > a:hover {
+  background-color: rgba(15, 10, 9, 0.1);
 }
 
 button {
@@ -264,9 +274,10 @@ button:hover {
 
 /* SKILLS */
 
-#skills{
-  border : 1px solid black;
-  padding: 40px;
+#skills {
+  border: 1px solid var(--black);
+  background-color: var(--skills-bg);
+  padding: 52px 56px 56px;
   margin-top: 100px;
   border-radius: 50px;
 }
@@ -283,30 +294,48 @@ button:hover {
   width: 80px;
 }
 
-.skills-heading{
+.skills-heading {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
+  gap: 64px;
+}
+
+.skills-heading > div {
+  flex: 1;
+  max-width: 680px;
 }
 
 .skills-heading > h1 {
   font-size: 4.5rem;
+  white-space: nowrap;
 }
 
 .skillset {
-  padding: 10px 20px;
-  border: 1px solid black;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 16px 20px;
+  border: 1px solid var(--black);
+  background-color: var(--bg);
   border-radius: 20px;
-  margin: 20px;
-  width: fit-content;
+  margin: 0 0 16px;
+  width: 100%;
+}
+
+.skillset:last-child {
+  margin-bottom: 0;
 }
 
 .skillset > h2 {
-  font-size: 1.75rem;
-  margin-bottom: 0.5rem;
+  flex: 0 0 150px;
+  font-size: 1.6rem;
 }
 
 .skillset > p {
   font-size: 1rem;
+  text-align: right;
 }
 
 /* PROJECTS */
@@ -493,4 +522,160 @@ footer {
   border-top: 1px solid #333;
   color: #999;
   font-size: 0.9rem;
+}
+
+@media (max-width: 900px) {
+  main {
+    margin: 110px 60px;
+  }
+
+  nav {
+    margin: 10px 60px;
+  }
+
+  .project-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  footer {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+@media (max-width: 650px) {
+  main {
+    margin: 150px 20px 80px;
+  }
+
+  section {
+    scroll-margin-top: 150px;
+  }
+
+  nav {
+    margin: 10px 12px;
+    padding: 14px 18px;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  nav > h2 {
+    font-size: 1.5rem;
+  }
+
+  .header-menu,
+  menu {
+    gap: 6px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  menu {
+    display: none;
+  }
+
+  .header-menu > button {
+    display: none;
+  }
+
+  menu > a {
+    padding: 6px 8px;
+    font-size: 0.85rem;
+  }
+
+  button {
+    padding: 8px 18px;
+  }
+
+  #home > h2 {
+    font-size: 2rem;
+  }
+
+  .hero-txt > h1 {
+    font-size: 2.5rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .middle {
+    align-items: center;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .links {
+    order: 2;
+  }
+
+  .hero-img {
+    height: 45vh;
+    width: min(100%, 320px);
+    order: 1;
+  }
+
+  .portfolio-year {
+    order: 3;
+    text-align: center;
+  }
+
+  #about {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .info-right {
+    text-align: left;
+    gap: 28px;
+  }
+
+  #skills {
+    padding: 32px 20px;
+    border-radius: 30px;
+  }
+
+  .skills-heading {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 28px;
+  }
+
+  .skills-heading > div {
+    max-width: none;
+  }
+
+  .skills-heading > h1 {
+    order: -1;
+    align-self: flex-start;
+    font-size: 3rem;
+  }
+
+  .skillset {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .skillset > h2 {
+    flex-basis: auto;
+  }
+
+  .skillset > p {
+    text-align: left;
+  }
+
+  .project-container {
+    grid-template-columns: 1fr;
+  }
+
+  #contact > h1 {
+    font-size: 2.75rem;
+  }
+
+  footer {
+    padding: 40px 20px 24px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
 }
