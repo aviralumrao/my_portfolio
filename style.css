@@ -384,3 +384,57 @@ button {
   background-color: var(--black);
   color: #ffffff;
 }
+
+/* CONTACT */
+
+#contact {
+  margin-top: 100px;
+  text-align: center;
+}
+
+#contact > h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+#contact > p {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+}
+
+.contact-cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 20px;
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  background-color: var(--black);
+  text-decoration: none;
+  color: #ffffff;
+  width: 140px;
+  font-weight: 500;
+}
+
+.contact-card > img {
+  width: 40px;
+  height: 40px;
+}
+
+
+/* CONTACT */
+#contact{
+  margin-top: 50px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
