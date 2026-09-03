@@ -365,7 +365,7 @@ button {
   gap: 10px;
 }
 
-.cta-buttons > button {
+.cta-buttons > a {
   flex: 1;
   padding: 10px 15px;
   border: 1px solid var(--black);
@@ -374,10 +374,13 @@ button {
   border-radius: 6px;
   font-size: 1rem;
   font-weight: 500;
-  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.cta-buttons > button:first-child {
+.cta-buttons > a:first-child {
   background-color: var(--black);
   color: #ffffff;
 }
